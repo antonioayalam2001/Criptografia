@@ -108,3 +108,19 @@ tabs.forEach(tab => {
         tab.classList.add("qualification__active");
     });
 })
+
+let sI = new TimelineMax();
+
+const socialIcons = document.querySelectorAll('.social_media a')
+socialIcons.forEach(icon => {
+  sI.fromTo(icon, 0.5, { opacity: 0, y: 20 }, { opacity: 1, y: 0 }  
+  ).repeat(-1)
+
+  icon.addEventListener('mouseover', () => { 
+    sI.pause();
+  })
+
+  icon.addEventListener('mouseout', () => { 
+    sI.play();
+  })
+})
