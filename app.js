@@ -91,12 +91,12 @@ const icons = document.querySelectorAll(".icon").forEach((element) => {
 // End of Skills Section
 
 // Adding light mode to th eweb page
-lightModeButton.addEventListener("click", () => { 
+// lightModeButton.addEventListener("click", () => { 
     
-    lightmode.forEach(element => {
-        element.style.backgroundColor = `${colors[Math.floor(Math.random() * colors.length)]}`;
-    });
-})
+//     lightmode.forEach(element => {
+//         element.style.backgroundColor = `${colors[Math.floor(Math.random() * colors.length)]}`;
+//     });
+// })
 
 
 tabs.forEach(tab => { 
