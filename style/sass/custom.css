@@ -202,10 +202,13 @@ nav .links a {
 }
 
 .bighero .hero img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  -webkit-transform: translate(10%, 10%);
+          transform: translate(10%, 10%);
 }
 
 .bighero .hero .headline {
@@ -241,7 +244,9 @@ nav .links a {
   width: 100%;
   height: 100vh;
   background: white;
-  background: linear-gradient(79deg, white 29%, #61002b 100%);
+  background-image: url("/img/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: -1;
 }
 
@@ -480,6 +485,8 @@ nav .links a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   color: #000;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 .qualification .qualification__info {
@@ -523,17 +530,17 @@ nav .links a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-bottom: 0.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
 .qualification__button {
   font-size: 1.125rem;
   font-weight: 500;
   cursor: pointer;
-  margin-right: 1.3rem;
+  margin-right: 1.5rem;
 }
 
 .qualification__button:hover {
@@ -624,6 +631,8 @@ footer {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  padding: 3rem;
+  margin-top: 1rem;
 }
 
 .about_container .about_1 {
@@ -638,7 +647,6 @@ footer {
 .about_container .about_2 {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  background: blue;
   padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,11 +658,13 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about_container .about_2 figure {
-  width: 50%;
-  height: 50%;
+  width: 60%;
 }
 
 .about_container .about_2 figure img {
