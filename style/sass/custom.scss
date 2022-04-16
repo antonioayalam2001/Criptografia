@@ -635,7 +635,21 @@ footer {
 	}
 }
 
-
+// Social Media Section
+.social_media{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	a{
+		font-size: 3rem;
+		color: $RosaB4;
+		margin-right: 1rem;
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
 
 
 // Media
