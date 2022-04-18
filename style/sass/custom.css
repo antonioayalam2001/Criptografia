@@ -700,6 +700,13 @@ footer .footer_social a {
   cursor: pointer;
   border-radius: 10px;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.about_container .about_1 .about_button:hover {
+  background: #fb98c3;
+  color: #220b15;
 }
 
 .about_container .about_2 {
