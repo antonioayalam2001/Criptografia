@@ -804,15 +804,22 @@ footer {
 }
 
 // Hobbies
-.hobbie_container{
-	h1{
-		font-size: 2.5rem;
+.hobbie{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.hobbie_title{
+		font-size: 3rem;
 		color: $RosaB3;
-		margin-bottom: 2rem;
-		grid-column: 1/-1;
 	}
+}
+
+
+.hobbie_container{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+	width: 100%;
 	gap: 4rem;
 	place-items: center;
 	padding: 1.5rem;
@@ -990,7 +997,8 @@ nav.active {
 
 .pAbs{
 display: none;
-
 }
+
+
 
 @import "../bootstrap-5.0.2/scss/bootstrap";
