@@ -197,6 +197,7 @@ nav {
 			font-size: 1rem;
 			color: $RosaB3;
 			text-decoration: none;
+			margin-right: 0.4rem;
 		}
 	}
 
@@ -512,6 +513,21 @@ nav {
 		padding: 0.4rem;
 		flex-basis: 50%;
 		color: #000;
+		.qua__title{
+			color: $RosaB3;
+			padding: 1rem;
+			font-size: 2rem;
+		}
+		.qua__subtitle{
+
+			p{
+				font-size: 1rem;
+				margin-bottom: 0.5rem;
+				padding: 1.3rem;
+			}
+		}
+
+
 	}
 	.qualification_container{
 		// flex-basis: 50%;
@@ -630,6 +646,17 @@ footer {
 			text-decoration: none;
 			color: $RosaP1;
 			margin-right: 1.5rem;
+			
+		}
+	}
+
+	.footer_info{
+		a{
+			text-decoration: none;
+			color: #fff;
+			&:visited{
+				color: black;
+			}
 		}
 	}
 }
@@ -793,6 +820,11 @@ footer {
 
 
 // Media
+
+
+
+
+
 @include media-breakpoint-up(md) {
 	.container {
 		max-width: var(--max-width);
@@ -935,12 +967,24 @@ footer {
 			a{
 				text-decoration: none;
 				color: #fff;
+				font-size: 1rem;
 				&:hover{
 					color: $RosaP3;
 				}
+
 			}
 		}
 	}
+.qualification {
+	.qualification__info {
+		flex-basis: 100%;
+		.qua__subtitle {
+			p {
+				padding: 0.2rem;
+			}
+		}
+	}
+}
 }
 
 .active {
@@ -961,7 +1005,7 @@ footer {
 			display: block;
 			padding: 1rem;
 		}
-	}
+	}	
 }
 
 
@@ -1016,6 +1060,12 @@ nav.active {
 display: none;
 }
 
+
+@media only screen and (max-width: 900px) {
+	.cry_container {
+		flex-direction: column;
+	}
+}
 
 
 @import "../bootstrap-5.0.2/scss/bootstrap";
