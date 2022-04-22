@@ -328,9 +328,10 @@ nav .links a {
 }
 
 .skills__bar,
-.skills__percentage {
-  height: 5px;
-  border-radius: .25rem;
+.skills__percentage {    
+    height: 5px;
+    background-color: #ffa4cc;
+    border-radius: 0.25rem;
 }
 
 .skills__percentage {
