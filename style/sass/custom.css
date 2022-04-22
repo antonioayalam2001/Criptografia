@@ -248,7 +248,7 @@ nav .links a {
   width: 100%;
   height: 100vh;
   background: white;
-  background-image: url("/img/Asset 28@3x.png");
+  background-image: url("./logoBackground.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
@@ -329,6 +329,8 @@ nav .links a {
 
 .skills__bar,
 .skills__percentage {
+  background-color: #fb98c3;
+  border-color: #430a23;
   height: 5px;
   border-radius: .25rem;
 }
@@ -1044,12 +1046,27 @@ footer .footer_info a:visited {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 1rem;
+  }
+  .about_container .about_1 {
+    padding: 1rem;
+  }
+  .about_container .about_2 {
+    margin-top: 2rem;
+    padding: 1rem;
   }
   .cry_container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 1rem;
+  }
+  .cry_container .cry_1 {
+    padding: 1rem;
+  }
+  .cry_container .cry_2 {
+    padding: 1rem;
   }
   .footerP {
     display: -webkit-box;
@@ -1197,6 +1214,11 @@ nav.active .slider {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.icon.photo img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 /*!
