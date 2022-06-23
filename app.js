@@ -6,17 +6,20 @@ const tabs = document.querySelectorAll("[data-target]"),
   tabContent = document.querySelectorAll("[data-content]");
   // Constant for lightMode
 const lightmode = document.querySelectorAll("[section-change]");
-const lightModeButton = document.querySelector("#lightMode");
 
 // Animation 
 const bighero = document.querySelector(".hero");
 const slider = document.querySelector(".slider");
 const logo = document.querySelector("#logo");
-const burger = document.querySelector(".burger");
-const headline = document.querySelector(".headline");
+
 // Burger
 const ham = document.querySelector(".burger");
 const nav = document.querySelector("nav");
+
+//Boton de Cambio de Color
+const button = document.querySelector(".buttonP")
+//Icono cambio de olor
+const icon = document.querySelector('.uil')
 
 // animation: 
 // Animation from the begginning
@@ -35,6 +38,9 @@ tl.fromTo(logo, 1.2, { opacity: 0, x: 30 }, { opacity: 1, x: 0 });
 // Burger
 ham.addEventListener("click", function () {
   if (nav.classList.contains("active")) {
+      if (nav.classList.contains("dark")){
+          alert("hola")
+      }
     // slider.style.height = "80vh";
   } else {
     slider.style.height = "100vh";
@@ -72,31 +78,68 @@ skillsHeader.forEach((element) => {
   element.addEventListener("click", toggleElements);
 });
 
-const colors = [
-  "#430a23",
-  "#220b15",
-  "#0c1d34",
-  "#0a111a",
-  "#230010",
-  "#3b021b",
-  "#03214c",
-  "#07336f",
-];
+//Change Color from the complete website
 
-const icons = document.querySelectorAll(".icon").forEach((element) => {
-  element.style.color = `${colors[Math.floor(Math.random() * colors.length)]}`;
-});
+let preferedColor = localStorage.getItem("preferedColor")
 
+//Cambio de Color
+button.addEventListener("click",(e)=>{
+    e.preventDefault()
+    button.classList.toggle('activeP')
+    preferedColor = localStorage.getItem("preferedColor")
+    if (preferedColor == null){
+        localStorage.setItem("preferedColor",'Dark')
+        lightmode.forEach((element)=>element.classList.toggle('dark'))
+        icon.classList.replace('uil-moon','uil-sun')
+        let colors = [
+            "#ff0070",
+            "#ffa4cc",
+            "#b80050",
+            "#fa006d",
+            "#ff0070",
+            "#8e003e",
+        ];
+    }
+    if (preferedColor == 'Dark'){
+        localStorage.removeItem("preferedColor",'Dark')
+        lightmode.forEach((element)=>element.classList.remove('dark'))
+        icon.classList.replace('uil-sun','uil-moon')
 
-// End of Skills Section
+    }
+})
 
-// Adding light mode to th eweb page
-// lightModeButton.addEventListener("click", () => { 
-    
-//     lightmode.forEach(element => {
-//         element.style.backgroundColor = `${colors[Math.floor(Math.random() * colors.length)]}`;
-//     });
-// })
+if (preferedColor == 'Dark'){
+    lightmode.forEach((element)=>element.classList.add('dark'))
+    let colors = [
+        "#ff0070",
+        "#ffa4cc",
+        "#b80050",
+        "#fa006d",
+        "#ff0070",
+        "#8e003e",
+    ];
+    const icons = document.querySelectorAll(".icon").forEach((element) => {
+        element.style.color = `${colors[Math.floor(Math.random() * colors.length)]}`;
+    });
+    button.classList.add('activeP')
+    icon.classList.replace('uil-moon','uil-sun')
+}else{
+    lightmode.forEach((element)=>element.classList.remove('dark'))
+    let colors = [
+        "#430a23",
+        "#220b15",
+        "#0c1d34",
+        "#0a111a",
+        "#230010",
+        "#3b021b",
+        "#03214c",
+        "#07336f",
+    ];
+    const icons = document.querySelectorAll(".icon").forEach((element) => {
+        element.style.color = `${colors[Math.floor(Math.random() * colors.length)]}`;
+    });
+    icon.classList.replace('uil-sun','uil-moon')
+}
 
 
 tabs.forEach(tab => { 
@@ -130,3 +173,6 @@ socialIcons.forEach(icon => {
     sI.play();
   })
 })
+
+
+
